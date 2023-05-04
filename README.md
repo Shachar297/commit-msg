@@ -32,3 +32,19 @@
 
 
 <img src="./src/cfg.png"> </img>
+
+
+## Validations
+
+ In order to check that this script is valid, follow these steps
+ 1. Create a branch from a jira issue, the branch name must have the issue key in it. (ABC-1234-add-new-feature)
+ 2. go to your local workspace, 
+ 3. git fetch 
+ 4. git checkout your_branch_name
+ 5. make some changes on your local branch and commit them.
+ 
+
+ go to gitlab and check for your commit message or type : 
+```
+  git log -1 --oneline 
+```
