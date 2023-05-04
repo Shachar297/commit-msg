@@ -12,10 +12,12 @@
 
 1.  Git bash installed on each machine.
 
-    - If you are not sure git bash is installed, you can do one of two things
+- 1. If you are not sure git bash is installed, you can do one of two things
       Open Visual Studio code -> Terminal -> <img src="./src/Terminal.png"> </img>
-      - If you see bash option, you are good to go.
-    - Open any folder on your windows. right click ->
+        - If you see bash option, you are good to go.
+
+
+- 2. Open any folder on your windows. right click ->
       <img src="./src/win-save.png"> </img>
       - If you see 'git bash here', you are good to go.
 
