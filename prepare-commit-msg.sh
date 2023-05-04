@@ -10,7 +10,6 @@
 
 # If the commit message aready contains a jira issue key- there is no need to do anything here.
 # If the last commit message does not contain a jira issue key, we change the commit message.
-# Notice, Do not push the code via this script (!!!).
 
 # ----------------------------------------------------------------
 
