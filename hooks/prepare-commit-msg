@@ -44,8 +44,8 @@ else
     JIRA_ISSUE_KEY=$(echo $BRANCH_NAME | sed -r 's/$JIRA_ISSUE_KEY_PATTERN/g/')
     # Set the new commit message according to the issue key and the lsat commit message
     JIRA_ISSUE_KEY=$(echo "$JIRA_ISSUE_KEY" | awk -F'-' '{print $1"-"$2}')
-    
-    NEW_COMMIT_MSG="$JIRA_ISSUE_KEY $LAST_COMMIT_MSG"
+
+    NEW_COMMIT_MSG="[$JIRA_ISSUE_KEY] $LAST_COMMIT_MSG"
     if ! [[ $LAST_COMMIT_MSG =~ $JIRA_ISSUE_KEY_PATTERN ]]; then
         
         if [[ $NEW_COMMIT_MSG =~ $JIRA_ISSUE_KEY_PATTERN ]]; then
