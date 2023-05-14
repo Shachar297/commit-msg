@@ -11,11 +11,11 @@
 #### This script rely on few things that are mandatory.
 
 1. Git version is above 2.9.0.
-    ```sh
-        git --version
-            # git version 2.32.1
-    ```
-2.  Git bash installed on each machine.
+   ```sh
+       git --version
+           # git version 2.32.1
+   ```
+2. Git bash installed on each machine.
 
 - 1. If you are not sure git bash is installed, you can do one of two things
      Open Visual Studio code -> Terminal -> <img src="./src/Terminal.png"> </img>
@@ -31,10 +31,11 @@
 
 4.  Set git config global parameter of the path of the script
     ```sh
-    git config --global core.hooksPath repo-location
+    git config --global core.hooksPath repo-location/hooks
+
     ```
 
-<img src="./src/cfg.png"> </img>
+<img src="./src/terminal1.png"> </img>
 
 ## Validations
 
