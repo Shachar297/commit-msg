@@ -27,10 +27,6 @@
 echo "Validating commit message............"
 sleep 2
 
-echo $0
-echo $1
-echo $2
-
 BRANCH_NAME=$(git symbolic-ref --short HEAD)
 JIRA_ISSUE_KEY_PATTERN='[A-Z]{2,}-[0-9]+'
 LAST_COMMIT_MSG=$(cat $1)
