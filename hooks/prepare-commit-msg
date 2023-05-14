@@ -27,10 +27,6 @@
 echo "Validating commit message............"
 sleep 2
 
-echo $0
-echo $1
-echo $2
-
 BRANCH_NAME=$(git symbolic-ref --short HEAD)
 JIRA_ISSUE_KEY_PATTERN='[A-Z]{2,}-[0-9]+'
 LAST_COMMIT_MSG=$(cat $1)
@@ -47,7 +43,9 @@ else
     # Set the issue key variable according to the branch name
     JIRA_ISSUE_KEY=$(echo $BRANCH_NAME | sed -r 's/$JIRA_ISSUE_KEY_PATTERN/g/')
     # Set the new commit message according to the issue key and the lsat commit message
-    NEW_COMMIT_MSG="[Jira Ticket $JIRA_ISSUE_KEY] $LAST_COMMIT_MSG"
+    JIRA_ISSUE_KEY=$(echo "$JIRA_ISSUE_KEY" | awk -F'-' '{print $1"-"$2}')
+    
+    NEW_COMMIT_MSG="$JIRA_ISSUE_KEY $LAST_COMMIT_MSG"
     if ! [[ $LAST_COMMIT_MSG =~ $JIRA_ISSUE_KEY_PATTERN ]]; then
         
         if [[ $NEW_COMMIT_MSG =~ $JIRA_ISSUE_KEY_PATTERN ]]; then
